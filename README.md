@@ -4,6 +4,7 @@
 <!-- <CLOG>Added physics module, updated install instructions for 0.2 release</CLOG> -->
 
 # mixed-signals
+![Mixed Signals Infographic](mixed-signals-infographic.jpg)
 
 **Primitives for signals, waveforms, noise, easing, RNG, and shuffling.**
 
