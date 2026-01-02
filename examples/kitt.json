@@ -1,0 +1,43 @@
+{
+  "_comment": "Sample SignalSpec for KITT demo - US Police Wail Siren",
+  "_description": "This JSON defines a frequency-modulated siren using library primitives",
+  "_modes": {
+    "kitt": "FM synthesis: Sine modulating frequency 380-580Hz at 2.19Hz",
+    "us_wail": "Triangle wave modulating frequency 650-1500Hz over 3.6s cycle",
+    "us_yelp": "Sine wave at 8Hz modulating frequency 650-1500Hz (rapid oscillation)",
+    "eu_two_tone": "Square wave selecting between 525Hz and 660Hz (classic nee-naw)",
+    "cylinder": "Low frequency rumble 40-120Hz with rotation envelope"
+  },
+
+  "Remap": {
+    "signal": {
+      "PhaseSine": {
+        "phase_source": {
+          "PhaseAccumulator": {
+            "freq_source": {
+              "Remap": {
+                "signal": {
+                  "Triangle": {
+                    "frequency": 0.278,
+                    "amplitude": 1.0,
+                    "offset": 0.0,
+                    "phase": 0.0
+                  }
+                },
+                "in_min": -1.0,
+                "in_max": 1.0,
+                "out_min": 650.0,
+                "out_max": 1500.0
+              }
+            },
+            "initial_phase": 0.0
+          }
+        }
+      }
+    },
+    "in_min": -1.0,
+    "in_max": 1.0,
+    "out_min": -0.65,
+    "out_max": 0.65
+  }
+}
